@@ -1,2 +1,2 @@
 # wiki
-My personal Wiki / Tips / Guides / Knowledge base
+[My personal Wiki / Tips / Guides / Knowledge base](https://schmas.github.io/wiki)
