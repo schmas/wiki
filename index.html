@@ -345,13 +345,23 @@ Error message and password prompt
 
 <li>Docker</li>
 
+<li>FFmpeg</li>
+
 <li>GettingStarted</li>
+
+<li>Git</li>
+
+<li>Shell / Bash</li>
 
 <li>Sub-Home</li>
 
 <li>TableOfContents</li>
 
 <li>Teste</li>
+
+<li>Vagrant</li>
+
+<li>Welcome</li>
 
 </ul>
 </p>
@@ -6433,8 +6443,8 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20160616144057905" creator="schmas" modified="20160616182238914" modifier="schmas" title="$:/DefaultTiddlers">
-<pre>TableOfContents</pre>
+<div created="20160616144057905" creator="schmas" modified="20160616184609288" modifier="schmas" title="$:/DefaultTiddlers">
+<pre>Welcome</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -6699,10 +6709,10 @@ Error message and password prompt
 <div created="20160603155804142" creator="schmas" modified="20160616175407129" modifier="schmas" title="$:/state/add-plugin-info/$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html/$:/temp/RemoteAssetInfo/http://tiddlywiki.com/library/v5.1.11/index.html/$:/plugins/tiddlywiki/tw5.com-docs">
 <pre>no</pre>
 </div>
-<div created="20160603155649791" creator="schmas" modified="20160616182054004" modifier="schmas" title="$:/state/showeditpreview">
-<pre>no</pre>
+<div created="20160603155649791" creator="schmas" modified="20160616183827016" modifier="schmas" title="$:/state/showeditpreview">
+<pre>yes</pre>
 </div>
-<div created="20160616144515210" creator="schmas" modified="20160616182131219" modifier="schmas" title="$:/state/sidebar">
+<div created="20160616144515210" creator="schmas" modified="20160616184811398" modifier="schmas" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160616151259880" modifier="schmas" title="$:/state/tab--1498284803">
@@ -6741,7 +6751,7 @@ Error message and password prompt
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="TableOfContents" title="$:/StoryList">
+<div list="Welcome" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160616151259880" modifier="schmas" title="$:/temp/advancedsearch">
@@ -7245,6 +7255,13 @@ docker-machine stop default #Stop boot2docker vm
 !! Build docker image:
 docker build -t dceschmidt/xxxx .</pre>
 </div>
+<div created="20160616183813422" creator="schmas" modified="20160616183851184" modifier="schmas" tags="TableOfContents" title="FFmpeg">
+<pre>! Ripping DVD, concating more than one VOB
+```shell
+# Ripping DVD, concating more than one VOB
+ffmpeg -i concat:VTS_01_1.VOB\|VTS_01_2.VOB -map 0:v -map 0:a -c:v libx264 -crf 18 -vf yadif -c:a flac ~/tmp/video.mkv
+```</pre>
+</div>
 <div created="20160603155717804" modified="20160603160046514" title="GettingStarted">
 <pre>\define lingo-base() $:/language/ControlPanel/Basics/
 Welcome to ~TiddlyWiki and the ~TiddlyWiki community
@@ -7263,6 +7280,99 @@ Before you start storing important information in ~TiddlyWiki it is important to
 See the [[control panel|$:/ControlPanel]] for more options.
 </pre>
 </div>
+<div created="20160616183930754" creator="schmas" modified="20160616184234862" modifier="schmas" tags="TableOfContents" title="Git">
+<pre>! Revert unstaged and not committed
+```shell
+git clean -df
+git reset HEAD --hard
+git checkout .
+```
+
+! Remove IGNORED files
+```shell
+git clean -xdf
+```
+
+! Using Multiple Remote Repos
+Single remote with multiple URLs, pushed (and fetched) consecutively
+
+```shell
+git remote set-url --add origin ssh://git@bitbucket.org/user/myproject.git
+git push origin master
+```
+
+! GitHub Syncing a fork
+```shell
+# Adding Original Repo
+git remote -v # List current remote repositories
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git
+
+# Syncing (Pulling) with Original Repo
+git fetch upstream
+git checkout master
+
+# Rebase Or Merge
+git rebase upstream/master # cleaner, apply reabse and than your changes
+git merge upstream/master
+
+# Commit???
+# Push???
+```
+
+! Links
+* [[Save git credential|http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github/5343146#5343146]]
+* [[Using Multiple Remote Repos|http://blog.schwuk.com/2013/02/11/using-multiple-remote-repositories-with-git/]]
+* [[keeping-a-github-fork-updated|https://robots.thoughtbot.com/keeping-a-github-fork-updated]]
+* [[Configuring a remote for a fork|https://help.github.com/articles/configuring-a-remote-for-a-fork/]]
+* [[Syncing a fork|https://help.github.com/articles/syncing-a-fork/]]
+</pre>
+</div>
+<div created="20160616184322392" creator="schmas" modified="20160616184352004" modifier="schmas" tags="TableOfContents" title="Shell / Bash">
+<pre>```shell
+# Rename folders, removing SPACES and DASHS
+# Ex: *img003 - niver.jpg -&gt; img003_niver.jpg*
+for i in * ; do if [ -d &quot;$i&quot; ]; then mv &quot;$i&quot; &quot;`echo $i | sed -e 's/-/ /g' -e 's/  */_/g'`&quot;; fi; done;
+```
+```shell
+# Rename folders, removing SPACES
+find . -type d -name &quot;* *&quot; -exec sh -c 'source=$(echo {}); path=$(echo ${source%/*}); directory=$(echo ${source##*/}); mv &quot;${source}&quot; &quot;${path}/${directory// /_}&quot;' \;
+```
+```shell
+# Rename files (pdf), replacing UNDERSCORE to DASH
+find . -type f -name &quot;*.pdf&quot; -exec sh -c 'source=$(echo {}); path=$(echo ${source%/*}); filename=$(echo ${source##*/}); mv &quot;${source}&quot; &quot;${path}/${filename//_/-}&quot; ' \;
+```
+```shell
+# Striping .1 from file name ending
+# Ex: *img.jpg.1 -&gt; img.jpg*
+find ./* -type f -name &quot;*.1&quot; -exec sh -c 'a=$(echo {}); b=$(echo {} | sed &quot;s/.1$//g&quot;); mv $a $b ' \;
+```
+```shell
+# Rename photos (Need to install jhead)
+jhead -nf%Y-%m-%d-%Hh%Mm%Ss *.*
+jhead -autorot -nf%Y-%m-%d-%Hh%Mm%Ss *.* # with auto rotate
+```
+```shell
+# Rename photos with taken date, in all directories
+find . -type f -name &quot;*.jpg&quot; -exec sh -c 'jhead -nf%Y-%m-%d_%Hh%Mm%Ss {}' \;
+```
+```shell
+# Find text in files
+find . -name '*.java' | egrep -v ' +|.svn' | xargs egrep -ih '_cache|@cacheable'
+```
+```shell
+# Find text in files (2)
+find . -maxdepth 4 -type f \( -iname &quot;*.properties&quot; ! -iname &quot;.*&quot; \) | xargs grep --color -i &quot;org.mule.transport.jms.queue.router.acsele.batch.processor&quot;
+```
+```shell
+# Replace text in one file
+sed -i -r 's/LAPSIS1065([0-9]*)/LAPSIS1065006/g' FM027-FMM.AST.01.500015.txt
+```
+```shell
+# Copy (from/to) Remote file with RSYNC
+rsync -avzh -e &quot;ssh -p 443&quot; aws-will-key.pem dceschmidt@54.94.192.75:~/
+```
+</pre>
+</div>
 <div created="20160616151139414" creator="schmas" modified="20160616151151949" modifier="schmas" tags="Home" title="Sub-Home">
 <pre></pre>
 </div>
@@ -7275,6 +7385,38 @@ See the [[control panel|$:/ControlPanel]] for more options.
 </div>
 <div created="20160603155406009" modified="20160603155411603" tags="" title="Teste">
 <pre></pre>
+</div>
+<div created="20160616184636107" creator="schmas" modified="20160616184804655" modifier="schmas" tags="TableOfContents" title="Vagrant">
+<pre>! Adding box. Avoiding _SSL read error_
+Add `--insecure` to avoid ssl check and `-c` to clean cache.
+Ex:
+
+```shell
+vagrant box add --insecure -c opentable/win-2012r2-standard-amd64-nocm
+```
+
+! Vagrant Plugins:
+
+* vagrant plugin install **vagrant-vbguest**
+* vagrant plugin install **vagrant-omnibus**
+* vagrant plugin install **vagrant-cachier** (cache apt, etc)
+* vagrant plugin install **vagrant-proxyconf** (proxy)
+* vagrant plugin install **vagrant-reload** (to reboot)
+* vagrant plugin install **vagrant-berkshelf** --plugin-version '&gt;= 2.0.1'
+
+
+! Proxy Configuration (examples)
+```shell
+export http_proxy=http://user:password@host:port
+export http_proxy=&quot;http://localhost:31281&quot;
+export VAGRANT_HTTP_PROXY=&quot;http://localhost:31281&quot;
+```
+
+! Links
+* [[mac-apt-cacher|https://github.com/stephen-mw/mac-apt-cacher]]</pre>
+</div>
+<div created="20160616184442621" creator="schmas" modified="20160616184553601" modifier="schmas" tags="" title="Welcome">
+<pre>&lt;&lt;list-links &quot;[tag[TableOfContents]]&quot;&gt;&gt;</pre>
 </div>
 
 </div>
