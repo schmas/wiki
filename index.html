@@ -213,6 +213,8 @@ Error message and password prompt
 
 <li>$:/state/toc/TableOfContents-Home--81657105</li>
 
+<li>$:/state/toc/TableOfContents-Shell / Bash--81657105</li>
+
 <li>$:/status/UserName</li>
 
 <li>$:/StoryList</li>
@@ -343,6 +345,8 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>Batch Rename</li>
+
 <li>Docker</li>
 
 <li>FFmpeg</li>
@@ -350,6 +354,8 @@ Error message and password prompt
 <li>GettingStarted</li>
 
 <li>Git</li>
+
+<li>Jhead</li>
 
 <li>Shell / Bash</li>
 
@@ -6709,11 +6715,11 @@ Error message and password prompt
 <div created="20160603155804142" creator="schmas" modified="20160616175407129" modifier="schmas" title="$:/state/add-plugin-info/$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html/$:/temp/RemoteAssetInfo/http://tiddlywiki.com/library/v5.1.11/index.html/$:/plugins/tiddlywiki/tw5.com-docs">
 <pre>no</pre>
 </div>
-<div created="20160603155649791" creator="schmas" modified="20160616183827016" modifier="schmas" title="$:/state/showeditpreview">
+<div created="20160603155649791" creator="schmas" modified="20160622180525275" modifier="schmas" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20160616144515210" creator="schmas" modified="20160616184811398" modifier="schmas" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20160616144515210" creator="schmas" modified="20160622180407788" modifier="schmas" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160616151259880" modifier="schmas" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Filter</pre>
@@ -6748,10 +6754,13 @@ Error message and password prompt
 <div created="20160616151152997" creator="schmas" modified="20160616180344609" modifier="schmas" title="$:/state/toc/TableOfContents-Home--81657105">
 <pre>close</pre>
 </div>
+<div created="20160622175928518" creator="schmas" modified="20160622175928518" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--81657105">
+<pre>open</pre>
+</div>
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="Welcome" title="$:/StoryList">
+<div list="[[Batch Rename]] Jhead [[Shell / Bash]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160616151259880" modifier="schmas" title="$:/temp/advancedsearch">
@@ -7205,6 +7214,31 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
 <div created="20160616182426527" creator="schmas" modified="20160616182432423" modifier="schmas" title="$:/view">
 <pre>classic</pre>
 </div>
+<div created="20160622180200752" creator="schmas" modified="20160622180528485" modifier="schmas" tags="[[Shell / Bash]]" title="Batch Rename">
+<pre>```shell
+# Rename folders, removing SPACES
+find . -type d -name &quot;* *&quot; -exec sh -c 'source=$(echo {}); path=$(echo ${source%/*}); directory=$(echo ${source##*/}); mv &quot;${source}&quot; &quot;${path}/${directory// /_}&quot;' \;
+```
+```shell
+# Rename folders, removing SPACES and DASHS
+# Ex: *img003 - niver.jpg -&gt; img003_niver.jpg*
+for i in * ; do if [ -d &quot;$i&quot; ]; then mv &quot;$i&quot; &quot;`echo $i | sed -e 's/-/ /g' -e 's/  */_/g'`&quot;; fi; done;
+```
+```shell
+# Rename files (pdf), replacing UNDERSCORE to DASH
+find . -type f -name &quot;*.pdf&quot; -exec sh -c 'source=$(echo {}); path=$(echo ${source%/*}); filename=$(echo ${source##*/}); mv &quot;${source}&quot; &quot;${path}/${filename//_/-}&quot; ' \;
+```
+```shell
+# Striping .1 from file name ending
+# Ex: *img.jpg.1 -&gt; img.jpg*
+find ./* -type f -name &quot;*.1&quot; -exec sh -c 'a=$(echo {}); b=$(echo {} | sed &quot;s/.1$//g&quot;); mv $a $b ' \;
+```
+```shell
+# Teste
+# Rename photos with taken date, in all directories
+find . -type f -name &quot;*.jpg&quot; -exec sh -c 'jhead -nf%Y-%m-%d_%Hh%Mm%Ss {}' \;
+```</pre>
+</div>
 <div created="20160616180535631" creator="schmas" modified="20160616182010687" modifier="schmas" tags="TableOfContents" title="Docker" type="">
 <pre>! Some Docker Commands
 ```shel
@@ -7327,35 +7361,15 @@ git merge upstream/master
 * [[Syncing a fork|https://help.github.com/articles/syncing-a-fork/]]
 </pre>
 </div>
-<div created="20160616184322392" creator="schmas" modified="20160616184352004" modifier="schmas" tags="TableOfContents" title="Shell / Bash">
+<div created="20160622175810205" creator="schmas" modified="20160622180213602" modifier="schmas" tags="[[Shell / Bash]]" title="Jhead">
 <pre>```shell
-# Rename folders, removing SPACES and DASHS
-# Ex: *img003 - niver.jpg -&gt; img003_niver.jpg*
-for i in * ; do if [ -d &quot;$i&quot; ]; then mv &quot;$i&quot; &quot;`echo $i | sed -e 's/-/ /g' -e 's/  */_/g'`&quot;; fi; done;
-```
-```shell
-# Rename folders, removing SPACES
-find . -type d -name &quot;* *&quot; -exec sh -c 'source=$(echo {}); path=$(echo ${source%/*}); directory=$(echo ${source##*/}); mv &quot;${source}&quot; &quot;${path}/${directory// /_}&quot;' \;
-```
-```shell
-# Rename files (pdf), replacing UNDERSCORE to DASH
-find . -type f -name &quot;*.pdf&quot; -exec sh -c 'source=$(echo {}); path=$(echo ${source%/*}); filename=$(echo ${source##*/}); mv &quot;${source}&quot; &quot;${path}/${filename//_/-}&quot; ' \;
-```
-```shell
-# Striping .1 from file name ending
-# Ex: *img.jpg.1 -&gt; img.jpg*
-find ./* -type f -name &quot;*.1&quot; -exec sh -c 'a=$(echo {}); b=$(echo {} | sed &quot;s/.1$//g&quot;); mv $a $b ' \;
-```
-```shell
 # Rename photos (Need to install jhead)
 jhead -nf%Y-%m-%d-%Hh%Mm%Ss *.*
 jhead -autorot -nf%Y-%m-%d-%Hh%Mm%Ss *.* # with auto rotate
-```
-```shell
-# Rename photos with taken date, in all directories
-find . -type f -name &quot;*.jpg&quot; -exec sh -c 'jhead -nf%Y-%m-%d_%Hh%Mm%Ss {}' \;
-```
-```shell
+```</pre>
+</div>
+<div created="20160616184322392" creator="schmas" modified="20160622180537710" modifier="schmas" tags="TableOfContents" title="Shell / Bash">
+<pre>```shell
 # Find text in files
 find . -name '*.java' | egrep -v ' +|.svn' | xargs egrep -ih '_cache|@cacheable'
 ```
