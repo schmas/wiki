@@ -127,9 +127,13 @@ Error message and password prompt
 
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import</li>
+
 <li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh</li>
 
 <li>$:/config/Toolbar/Text</li>
+
+<li>$:/config/WikiParserRules/Inline/wikilink</li>
 
 <li>$:/core</li>
 
@@ -189,6 +193,8 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/ShowPaletteEditor</li>
+
 <li>$:/state/sidebar</li>
 
 <li>$:/state/tab--1498284803</li>
@@ -211,9 +217,21 @@ Error message and password prompt
 
 <li>$:/state/tabs/controlpanel/toolbars-1345989671</li>
 
+<li>$:/state/toc/Shell / Bash-Batch Rename-1798960057</li>
+
+<li>$:/state/toc/Shell / Bash-Find files / directories-1798960057</li>
+
+<li>$:/state/toc/Shell / Bash-Jhead-1798960057</li>
+
 <li>$:/state/toc/TableOfContents-Home--81657105</li>
 
+<li>$:/state/toc/TableOfContents-Shell / Bash--687205153</li>
+
 <li>$:/state/toc/TableOfContents-Shell / Bash--81657105</li>
+
+<li>$:/state/toc/TableOfContents-Shell / Bash-1798960057</li>
+
+<li>$:/state/toc/TableOfContents-Shell / Bash-497309061</li>
 
 <li>$:/status/UserName</li>
 
@@ -335,11 +353,29 @@ Error message and password prompt
 
 <li>$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html</li>
 
+<li>$:/temp/toc/selectedTiddler</li>
+
+<li>$:/theme</li>
+
 <li>$:/themes/tiddlywiki/centralised</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
+<li>$:/themes/tiddlywiki/tight</li>
+
 <li>$:/themes/tiddlywiki/vanilla</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/fontsize</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/storyright</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/storywidth</li>
+
+<li>$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth</li>
+
+<li>$:/themes/tiddlywiki/vanilla/options/sidebarlayout</li>
 
 <li>$:/themes/tiddlywiki/vanilla/options/stickytitles</li>
 
@@ -351,11 +387,17 @@ Error message and password prompt
 
 <li>FFmpeg</li>
 
+<li>Find / Replace Text in file</li>
+
+<li>Find files / directories</li>
+
 <li>GettingStarted</li>
 
 <li>Git</li>
 
-<li>Jhead</li>
+<li>JHead - Photos utils</li>
+
+<li>RSYNC</li>
 
 <li>Shell / Bash</li>
 
@@ -394,11 +436,17 @@ Error message and password prompt
 <div created="20160616144404982" creator="schmas" modified="20160616144404982" modifier="schmas" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
 <pre>show</pre>
 </div>
+<div created="20160712153757565" creator="schmas" modified="20160712153814470" modifier="schmas" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/import">
+<pre>hide</pre>
+</div>
 <div created="20160616150910362" creator="schmas" modified="20160616150910362" modifier="schmas" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/refresh">
 <pre>show</pre>
 </div>
 <div created="20160616144915789" creator="schmas" modified="20160616144919285" modifier="schmas" title="$:/config/Toolbar/Text">
 <pre>no</pre>
+</div>
+<div created="20160712154202753" creator="schmas" modified="20160712154202753" modifier="schmas" title="$:/config/WikiParserRules/Inline/wikilink">
+<pre>disable</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.11">
 <pre>{
@@ -6718,16 +6766,19 @@ Error message and password prompt
 <div created="20160603155649791" creator="schmas" modified="20160622180525275" modifier="schmas" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
-<div created="20160616144515210" creator="schmas" modified="20160622180407788" modifier="schmas" title="$:/state/sidebar">
-<pre>no</pre>
+<div created="20160712153901323" creator="schmas" modified="20160712153901323" modifier="schmas" title="$:/state/ShowPaletteEditor">
+<pre>yes</pre>
 </div>
-<div created="20160616151212541" creator="schmas" modified="20160616151259880" modifier="schmas" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+<div created="20160616144515210" creator="schmas" modified="20160712153940562" modifier="schmas" title="$:/state/sidebar">
+<pre>yes</pre>
 </div>
-<div created="20160603155957898" creator="schmas" modified="20160616182434440" modifier="schmas" title="$:/state/tab--1963855381">
-<pre>$:/themes/tiddlywiki/vanilla/themetweaks</pre>
+<div created="20160616151212541" creator="schmas" modified="20160712151612364" modifier="schmas" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
-<div created="20160616144125007" creator="schmas" modified="20160616182331921" modifier="schmas" title="$:/state/tab--2112689675">
+<div created="20160603155957898" creator="schmas" modified="20160712154718300" modifier="schmas" title="$:/state/tab--1963855381">
+<pre>$:/core/ui/ControlPanel/Palette</pre>
+</div>
+<div created="20160616144125007" creator="schmas" modified="20160712154721837" modifier="schmas" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Basics</pre>
 </div>
 <div created="20160616144611949" creator="schmas" modified="20160616175850788" modifier="schmas" title="$:/state/tab--86143343">
@@ -6736,34 +6787,52 @@ Error message and password prompt
 <div created="20160616145130423" creator="schmas" modified="20160616145136143" modifier="schmas" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/TiddlerFields</pre>
 </div>
-<div created="20160603155439156" creator="schmas" modified="20160616175828429" modifier="schmas" title="$:/state/tab-1342078386">
+<div created="20160603155439156" creator="schmas" modified="20160712154610373" modifier="schmas" title="$:/state/tab-1342078386">
 <pre>$:/core/ui/ControlPanel/Plugins/Add/Themes</pre>
 </div>
-<div created="20160603155430213" creator="schmas" modified="20160616182542062" modifier="schmas" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Info</pre>
+<div created="20160603155430213" creator="schmas" modified="20160712154726026" modifier="schmas" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20160616144504290" creator="schmas" modified="20160616153218247" modifier="schmas" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/All</pre>
 </div>
-<div created="20160603155616064" creator="schmas" modified="20160616180350671" modifier="schmas" title="$:/state/tab/sidebar--1835078512">
+<div created="20160603155616064" creator="schmas" modified="20160712151004658" modifier="schmas" title="$:/state/tab/sidebar--1835078512">
 <pre>TableOfContents</pre>
 </div>
-<div created="20160616145155431" creator="schmas" modified="20160616145315147" modifier="schmas" title="$:/state/tabs/controlpanel/toolbars-1345989671">
+<div created="20160616145155431" creator="schmas" modified="20160712153841795" modifier="schmas" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
+</div>
+<div created="20160712155040427" creator="schmas" modified="20160712155040427" modifier="schmas" title="$:/state/toc/Shell / Bash-Batch Rename-1798960057">
+<pre>open</pre>
+</div>
+<div created="20160712155039992" creator="schmas" modified="20160712155039992" modifier="schmas" title="$:/state/toc/Shell / Bash-Find files / directories-1798960057">
+<pre>open</pre>
+</div>
+<div created="20160712155039180" creator="schmas" modified="20160712155039180" modifier="schmas" title="$:/state/toc/Shell / Bash-Jhead-1798960057">
+<pre>open</pre>
 </div>
 <div created="20160616151152997" creator="schmas" modified="20160616180344609" modifier="schmas" title="$:/state/toc/TableOfContents-Home--81657105">
 <pre>close</pre>
 </div>
+<div created="20160712145633948" creator="schmas" modified="20160712145633948" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--687205153">
+<pre>open</pre>
+</div>
 <div created="20160622175928518" creator="schmas" modified="20160622175928518" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--81657105">
+<pre>open</pre>
+</div>
+<div created="20160712155151182" creator="schmas" modified="20160712155152001" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash-1798960057">
+<pre>close</pre>
+</div>
+<div created="20160712145603768" creator="schmas" modified="20160712145603768" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash-497309061">
 <pre>open</pre>
 </div>
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="[[Batch Rename]] Jhead [[Shell / Bash]]" title="$:/StoryList">
+<div list="Welcome [[JHead - Photos utils]] [[Find / Replace Text in file]] FFmpeg" title="$:/StoryList">
 <pre></pre>
 </div>
-<div created="20160616151212541" creator="schmas" modified="20160616151259880" modifier="schmas" title="$:/temp/advancedsearch">
+<div created="20160616151212541" creator="schmas" modified="20160712151547904" modifier="schmas" title="$:/temp/advancedsearch">
 <pre>[tags[]sort[title]]</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -7083,14 +7152,20 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
 <div author="JeremyRuston" core-version="&gt;=5.0.0" created="20160603155433873" dependents="" description="Basic theme" modified="20160603155433873" name="Vanilla" original-plugin-type="theme" original-tags="" original-title="$:/themes/tiddlywiki/vanilla" original-type="application/json" server-url="http://tiddlywiki.com/library/v5.1.11/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/http://tiddlywiki.com/library/v5.1.11/index.html/$:/themes/tiddlywiki/vanilla" type="text/vnd.tiddlywiki" version="5.1.11">
 <pre></pre>
 </div>
-<div created="20160603155436181" creator="schmas" modified="20160616175827101" modifier="schmas" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
+<div created="20160603155436181" creator="schmas" modified="20160712154301129" modifier="schmas" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre></pre>
 </div>
 <div created="20160616152629153" creator="schmas" modified="20160616182251498" modifier="schmas" title="$:/temp/search">
 <pre></pre>
 </div>
-<div created="20160603155752209" modified="20160603155752209" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html" url="http://tiddlywiki.com/library/v5.1.11/index.html">
+<div created="20160712154626896" creator="schmas" modified="20160712154626896" modifier="schmas" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html" url="http://tiddlywiki.com/library/v5.1.11/index.html">
 <pre>loaded</pre>
+</div>
+<div created="20160712155020329" creator="schmas" modified="20160712155023795" modifier="schmas" title="$:/temp/toc/selectedTiddler">
+<pre>Batch Rename</pre>
+</div>
+<div created="20160712154641656" creator="schmas" modified="20160712154652175" modifier="schmas" title="$:/theme">
+<pre>$:/themes/tiddlywiki/vanilla</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/snowwhite" description="Centralises the story river" name="Centralised" plugin-type="theme" title="$:/themes/tiddlywiki/centralised" type="application/json" version="5.1.11">
 <pre>{
@@ -7110,6 +7185,17 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
             &quot;title&quot;: &quot;$:/themes/tiddlywiki/snowwhite/base&quot;,
             &quot;tags&quot;: &quot;[[$:/tags/Stylesheet]]&quot;,
             &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n.tc-sidebar-header {\n\ttext-shadow: 0 1px 0 &lt;&lt;colour sidebar-foreground-shadow&gt;&gt;;\n}\n\n.tc-tiddler-info {\n\t&lt;&lt;box-shadow \&quot;inset 1px 2px 3px rgba(0,0,0,0.1)\&quot;&gt;&gt;\n}\n\n@media screen {\n\t.tc-tiddler-frame {\n\t\t&lt;&lt;box-shadow \&quot;1px 1px 5px rgba(0, 0, 0, 0.3)\&quot;&gt;&gt;\n\t}\n}\n\n@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\t.tc-tiddler-frame {\n\t\t&lt;&lt;box-shadow none&gt;&gt;\n\t}\n}\n\n.tc-page-controls button svg, .tc-tiddler-controls button svg, .tc-topbar button svg {\n\t&lt;&lt;transition \&quot;fill 150ms ease-in-out\&quot;&gt;&gt;\n}\n\n.tc-tiddler-controls button.tc-selected,\n.tc-page-controls button.tc-selected {\n\t&lt;&lt;filter \&quot;drop-shadow(0px -1px 2px rgba(0,0,0,0.25))\&quot;&gt;&gt;\n}\n\n.tc-tiddler-frame input.tc-edit-texteditor {\n\t&lt;&lt;box-shadow \&quot;inset 0 1px 8px rgba(0, 0, 0, 0.15)\&quot;&gt;&gt;\n}\n\n.tc-edit-tags {\n\t&lt;&lt;box-shadow \&quot;inset 0 1px 8px rgba(0, 0, 0, 0.15)\&quot;&gt;&gt;\n}\n\n.tc-tiddler-frame .tc-edit-tags input.tc-edit-texteditor {\n\t&lt;&lt;box-shadow \&quot;none\&quot;&gt;&gt;\n\tborder: none;\n\toutline: none;\n}\n\ncanvas.tc-edit-bitmapeditor  {\n\t&lt;&lt;box-shadow \&quot;2px 2px 5px rgba(0, 0, 0, 0.5)\&quot;&gt;&gt;\n}\n\n.tc-drop-down {\n\tborder-radius: 4px;\n\t&lt;&lt;box-shadow \&quot;2px 2px 10px rgba(0, 0, 0, 0.5)\&quot;&gt;&gt;\n}\n\n.tc-block-dropdown {\n\tborder-radius: 4px;\n\t&lt;&lt;box-shadow \&quot;2px 2px 10px rgba(0, 0, 0, 0.5)\&quot;&gt;&gt;\n}\n\n.tc-modal {\n\tborder-radius: 6px;\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.3)\&quot;&gt;&gt;\n}\n\n.tc-modal-footer {\n\tborder-radius: 0 0 6px 6px;\n\t&lt;&lt;box-shadow \&quot;inset 0 1px 0 #fff\&quot;&gt;&gt;;\n}\n\n\n.tc-alert {\n\tborder-radius: 6px;\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.6)\&quot;&gt;&gt;\n}\n\n.tc-notification {\n\tborder-radius: 6px;\n\t&lt;&lt;box-shadow \&quot;0 3px 7px rgba(0,0,0,0.3)\&quot;&gt;&gt;\n\ttext-shadow: 0 1px 0 rgba(255,255,255, 0.8);\n}\n\n.tc-sidebar-lists .tc-tab-set .tc-tab-divider {\n\tborder-top: none;\n\theight: 1px;\n\t&lt;&lt;background-linear-gradient \&quot;left, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) 100%\&quot;&gt;&gt;\n}\n\n.tc-more-sidebar .tc-tab-buttons button {\n\t&lt;&lt;background-linear-gradient \&quot;left, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.1) 100%\&quot;&gt;&gt;\n}\n\n.tc-more-sidebar .tc-tab-buttons button.tc-tab-selected {\n\t&lt;&lt;background-linear-gradient \&quot;left, rgba(0,0,0,0.05) 0%, rgba(255,255,255,0.05) 100%\&quot;&gt;&gt;\n}\n\n.tc-message-box img {\n\t&lt;&lt;box-shadow \&quot;1px 1px 3px rgba(0,0,0,0.5)\&quot;&gt;&gt;\n}\n\n.tc-plugin-info {\n\t&lt;&lt;box-shadow \&quot;1px 1px 3px rgba(0,0,0,0.5)\&quot;&gt;&gt;\n}\n&quot;
+        }
+    }
+}</pre>
+</div>
+<div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Tightly packed theme" name="Tight" plugin-type="theme" title="$:/themes/tiddlywiki/tight" type="application/json" version="5.1.11">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/themes/tiddlywiki/tight/base&quot;: {
+            &quot;title&quot;: &quot;$:/themes/tiddlywiki/tight/base&quot;,
+            &quot;tags&quot;: &quot;[[$:/tags/Stylesheet]]&quot;,
+            &quot;text&quot;: &quot;\\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline\n\n@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n}\n\n@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {\n\n\thtml body.tc-body {\n\t\tfont-size: 13px;\n\t\tline-height: 16px;\n\t}\n\n\thtml body.tc-body h1,\n\thtml body.tc-body h2,\n\thtml body.tc-body h3,\n\thtml body.tc-body h4,\n\thtml body.tc-body p {\n\t\tmargin-top: 0.3em;\n\t\tmargin-bottom: 0.3em;\n\t}\n\n\thtml body.tc-body code {\n\t\tfont-size: 0.8em;\n\t}\n\n\thtml body.tc-body section.tc-story-river {\n\t\tpadding: 0px;\n\t}\n\n\thtml body.tc-body div.tc-tiddler-frame {\n\t\tpadding: 12px;\n\t}\n\n\thtml body.tc-body div.tc-sidebar-scrollable {\n\t\tpadding: 12px 0 12px 12px;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-subtitle {\n\t\tfont-size: 0.7em;\n\t\tfont-weight: 700;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-tags-wrapper {\n\t\tmargin: 0;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame button.tc-tag-label,\n\thtml body.tc-body .tc-tiddler-frame span.tc-tag-label {\n\t\tfont-size: 0.8em;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-tiddler-body h1 {\n\t\tfont-size: 1.5em;\n\t\tfont-weight: 500;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-tiddler-body h2 {\n\t\tfont-size: 1.3em;\n\t\tfont-weight: 500;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-tiddler-body h3 {\n\t\tfont-size: 1.2em;\n\t\tfont-weight: 500;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-tiddler-body h4 {\n\t\tfont-size: 1.1em;\n\t\tfont-weight: 500;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-improvement-banner {\n\t\tmargin-right: -15px;\n\t\tmargin-left: -10px;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-tiddler-info {\n\t    margin: 0 -13px 0 -13px;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-fold-banner {\n\t    width: 13px;\n\t    margin-left: -15px;\n\t}\n\n\thtml body.tc-body .tc-tiddler-frame .tc-unfold-banner {\n\t    margin-left: -13px;\n\t    margin-top: -4px;\n\t}\n\n}\n&quot;
         }
     }
 }</pre>
@@ -7208,6 +7294,24 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
     }
 }</pre>
 </div>
+<div created="20160712153713417" creator="schmas" modified="20160712153727165" modifier="schmas" title="$:/themes/tiddlywiki/vanilla/metrics/fontsize">
+<pre>14px</pre>
+</div>
+<div created="20160712151042757" creator="schmas" modified="20160712151141133" modifier="schmas" title="$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth">
+<pre>270px</pre>
+</div>
+<div created="20160712151206174" creator="schmas" modified="20160712151210068" modifier="schmas" title="$:/themes/tiddlywiki/vanilla/metrics/storyright">
+<pre>770px</pre>
+</div>
+<div created="20160712151217814" creator="schmas" modified="20160712151221932" modifier="schmas" title="$:/themes/tiddlywiki/vanilla/metrics/storywidth">
+<pre>770px</pre>
+</div>
+<div created="20160712151229765" creator="schmas" modified="20160712151233201" modifier="schmas" title="$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth">
+<pre>686px</pre>
+</div>
+<div created="20160712151110970" creator="schmas" modified="20160712151110970" modifier="schmas" title="$:/themes/tiddlywiki/vanilla/options/sidebarlayout">
+<pre>fluid-fixed</pre>
+</div>
 <div created="20160616182352513" creator="schmas" modified="20160616182352513" modifier="schmas" title="$:/themes/tiddlywiki/vanilla/options/stickytitles">
 <pre>yes</pre>
 </div>
@@ -7296,6 +7400,28 @@ docker build -t dceschmidt/xxxx .</pre>
 ffmpeg -i concat:VTS_01_1.VOB\|VTS_01_2.VOB -map 0:v -map 0:a -c:v libx264 -crf 18 -vf yadif -c:a flac ~/tmp/video.mkv
 ```</pre>
 </div>
+<div created="20160712160308826" creator="schmas" modified="20160712160311315" modifier="schmas" tags="[[Shell / Bash]]" title="Find / Replace Text in file">
+<pre>```shell
+# Find text in files
+find . -name '*.java' | egrep -v ' +|.svn' | xargs egrep -ih '_cache|@cacheable'
+```
+
+```shell
+# Find text in files (2)
+find . -maxdepth 4 -type f \( -iname &quot;*.properties&quot; ! -iname &quot;.*&quot; \) | xargs grep --color -i &quot;org.mule.transport.jms.queue.router.acsele.batch.processor&quot;
+```
+
+```shell
+# Replace text in one file
+sed -i -r 's/LAPSIS1065([0-9]*)/LAPSIS1065006/g' FM027-FMM.AST.01.500015.txt
+```</pre>
+</div>
+<div created="20160712154033072" creator="schmas" modified="20160712154127515" modifier="schmas" tags="[[Shell / Bash]]" title="Find files / directories">
+<pre>```shell
+# Find files ignoring errors (or Permission denied)
+find / 2&gt;/dev/null
+```</pre>
+</div>
 <div created="20160603155717804" modified="20160603160046514" title="GettingStarted">
 <pre>\define lingo-base() $:/language/ControlPanel/Basics/
 Welcome to ~TiddlyWiki and the ~TiddlyWiki community
@@ -7361,31 +7487,23 @@ git merge upstream/master
 * [[Syncing a fork|https://help.github.com/articles/syncing-a-fork/]]
 </pre>
 </div>
-<div created="20160622175810205" creator="schmas" modified="20160622180213602" modifier="schmas" tags="[[Shell / Bash]]" title="Jhead">
+<div created="20160622175810205" creator="schmas" description="jhead util, to rename, rotate, photos, etc" modified="20160712160350312" modifier="schmas" tags="[[Shell / Bash]]" title="JHead - Photos utils">
 <pre>```shell
 # Rename photos (Need to install jhead)
 jhead -nf%Y-%m-%d-%Hh%Mm%Ss *.*
 jhead -autorot -nf%Y-%m-%d-%Hh%Mm%Ss *.* # with auto rotate
 ```</pre>
 </div>
-<div created="20160616184322392" creator="schmas" modified="20160622180537710" modifier="schmas" tags="TableOfContents" title="Shell / Bash">
+<div created="20160712155945352" creator="schmas" modified="20160712160003920" modifier="schmas" tags="[[Shell / Bash]]" title="RSYNC">
 <pre>```shell
-# Find text in files
-find . -name '*.java' | egrep -v ' +|.svn' | xargs egrep -ih '_cache|@cacheable'
-```
-```shell
-# Find text in files (2)
-find . -maxdepth 4 -type f \( -iname &quot;*.properties&quot; ! -iname &quot;.*&quot; \) | xargs grep --color -i &quot;org.mule.transport.jms.queue.router.acsele.batch.processor&quot;
-```
-```shell
-# Replace text in one file
-sed -i -r 's/LAPSIS1065([0-9]*)/LAPSIS1065006/g' FM027-FMM.AST.01.500015.txt
-```
-```shell
 # Copy (from/to) Remote file with RSYNC
 rsync -avzh -e &quot;ssh -p 443&quot; aws-will-key.pem dceschmidt@54.94.192.75:~/
-```
-</pre>
+```</pre>
+</div>
+<div created="20160616184322392" creator="schmas" modified="20160712155808563" modifier="schmas" tags="TableOfContents" title="Shell / Bash">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+&lt;&lt;toc-selective-expandable 'Shell / Bash' 'sort[title]'&gt;&gt;
+&lt;/div&gt;</pre>
 </div>
 <div created="20160616151139414" creator="schmas" modified="20160616151151949" modifier="schmas" tags="Home" title="Sub-Home">
 <pre></pre>
@@ -7429,8 +7547,12 @@ export VAGRANT_HTTP_PROXY=&quot;http://localhost:31281&quot;
 ! Links
 * [[mac-apt-cacher|https://github.com/stephen-mw/mac-apt-cacher]]</pre>
 </div>
-<div created="20160616184442621" creator="schmas" modified="20160616184553601" modifier="schmas" tags="" title="Welcome">
-<pre>&lt;&lt;list-links &quot;[tag[TableOfContents]]&quot;&gt;&gt;</pre>
+<div created="20160616184442621" creator="schmas" modified="20160712154838101" modifier="schmas" tags="" title="Welcome">
+<pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
+
+&lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
+
+&lt;/div&gt;</pre>
 </div>
 
 </div>
