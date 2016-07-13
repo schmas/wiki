@@ -223,6 +223,8 @@ Error message and password prompt
 
 <li>$:/state/toc/Shell / Bash-Jhead-1798960057</li>
 
+<li>$:/state/toc/TableOfContents-Docker--81657105</li>
+
 <li>$:/state/toc/TableOfContents-Home--81657105</li>
 
 <li>$:/state/toc/TableOfContents-Shell / Bash--687205153</li>
@@ -385,11 +387,15 @@ Error message and password prompt
 
 <li>Docker</li>
 
+<li>docker-openvpn-proxy</li>
+
 <li>FFmpeg</li>
 
 <li>Find / Replace Text in file</li>
 
 <li>Find files / directories</li>
+
+<li>Find my public IP</li>
 
 <li>GettingStarted</li>
 
@@ -6811,13 +6817,16 @@ Error message and password prompt
 <div created="20160712155039180" creator="schmas" modified="20160712155039180" modifier="schmas" title="$:/state/toc/Shell / Bash-Jhead-1798960057">
 <pre>open</pre>
 </div>
+<div created="20160713024936163" creator="schmas" modified="20160713024936163" modifier="schmas" title="$:/state/toc/TableOfContents-Docker--81657105">
+<pre>open</pre>
+</div>
 <div created="20160616151152997" creator="schmas" modified="20160616180344609" modifier="schmas" title="$:/state/toc/TableOfContents-Home--81657105">
 <pre>close</pre>
 </div>
 <div created="20160712145633948" creator="schmas" modified="20160712145633948" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--687205153">
 <pre>open</pre>
 </div>
-<div created="20160622175928518" creator="schmas" modified="20160622175928518" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--81657105">
+<div created="20160622175928518" creator="schmas" modified="20160713025303802" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--81657105">
 <pre>open</pre>
 </div>
 <div created="20160712155151182" creator="schmas" modified="20160712155152001" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash-1798960057">
@@ -6829,7 +6838,7 @@ Error message and password prompt
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="Welcome [[JHead - Photos utils]] [[Find / Replace Text in file]] FFmpeg" title="$:/StoryList">
+<div list="[[Find my public IP]] docker-openvpn-proxy Welcome [[Shell / Bash]] Docker" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160712151547904" modifier="schmas" title="$:/temp/advancedsearch">
@@ -7393,6 +7402,12 @@ docker-machine stop default #Stop boot2docker vm
 !! Build docker image:
 docker build -t dceschmidt/xxxx .</pre>
 </div>
+<div created="20160713024844607" creator="schmas" modified="20160713025135994" modifier="schmas" tags="Docker" title="docker-openvpn-proxy">
+<pre>References:
+
+* https://github.com/bgahagan/docker-proxy
+* https://github.com/schmas/docker-transmission-openvpn</pre>
+</div>
 <div created="20160616183813422" creator="schmas" modified="20160616183851184" modifier="schmas" tags="TableOfContents" title="FFmpeg">
 <pre>! Ripping DVD, concating more than one VOB
 ```shell
@@ -7420,6 +7435,15 @@ sed -i -r 's/LAPSIS1065([0-9]*)/LAPSIS1065006/g' FM027-FMM.AST.01.500015.txt
 <pre>```shell
 # Find files ignoring errors (or Permission denied)
 find / 2&gt;/dev/null
+```</pre>
+</div>
+<div created="20160713025149490" creator="schmas" modified="20160713025316106" modifier="schmas" tags="[[Shell / Bash]]" title="Find my public IP">
+<pre>```shell
+wget http://ipinfo.io/ip -qO -
+
+# OR
+
+curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/&lt;.*$//'  
 ```</pre>
 </div>
 <div created="20160603155717804" modified="20160603160046514" title="GettingStarted">
@@ -7547,12 +7571,15 @@ export VAGRANT_HTTP_PROXY=&quot;http://localhost:31281&quot;
 ! Links
 * [[mac-apt-cacher|https://github.com/stephen-mw/mac-apt-cacher]]</pre>
 </div>
-<div created="20160616184442621" creator="schmas" modified="20160712154838101" modifier="schmas" tags="" title="Welcome">
+<div created="20160616184442621" creator="schmas" modified="20160713024834255" modifier="schmas" tags="" title="Welcome">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
 
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+---
+* [[Wiki Hosted Page|https://schmas.github.io/wiki]]
+* [[Wiki source code|https://github.com/schmas/wiki/tree/gh-pages]]</pre>
 </div>
 
 </div>
