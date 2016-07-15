@@ -6874,8 +6874,8 @@ Error message and password prompt
 <div created="20160712145633948" creator="schmas" modified="20160712145633948" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--687205153">
 <pre>open</pre>
 </div>
-<div created="20160622175928518" creator="schmas" modified="20160715052305060" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--81657105">
-<pre>close</pre>
+<div created="20160622175928518" creator="schmas" modified="20160715174449417" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash--81657105">
+<pre>open</pre>
 </div>
 <div created="20160712155151182" creator="schmas" modified="20160712155152001" modifier="schmas" title="$:/state/toc/TableOfContents-Shell / Bash-1798960057">
 <pre>close</pre>
@@ -6886,7 +6886,7 @@ Error message and password prompt
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="Welcome" title="$:/StoryList">
+<div list="[[Find my public IP]] Welcome docker-openvpn-client" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160712151547904" modifier="schmas" title="$:/temp/advancedsearch">
@@ -7448,9 +7448,10 @@ docker inspect -f &quot;{{ .NetworkSettings.IPAddress }}&quot; &lt;ID&gt;; #Chec
 docker-compose up --build
 ```</pre>
 </div>
-<div created="20160713024844607" creator="schmas" modified="20160715035511037" modifier="schmas" tags="[[My Dockers]]" title="docker-openvpn-client">
+<div created="20160713024844607" creator="schmas" modified="20160715134447782" modifier="schmas" tags="[[My Dockers]]" title="docker-openvpn-client">
 <pre>References:
 
+* https://github.com/phusion/baseimage-docker
 * https://github.com/bgahagan/docker-proxy
 * https://github.com/schmas/docker-transmission-openvpn
 * http://kchard.github.io/runit-quickstart/</pre>
@@ -7484,13 +7485,18 @@ sed -i -r 's/LAPSIS1065([0-9]*)/LAPSIS1065006/g' FM027-FMM.AST.01.500015.txt
 find / 2&gt;/dev/null
 ```</pre>
 </div>
-<div created="20160713025149490" creator="schmas" modified="20160713025316106" modifier="schmas" tags="[[Shell / Bash]]" title="Find my public IP">
+<div created="20160713025149490" creator="schmas" modified="20160715182255870" modifier="schmas" tags="[[Shell / Bash]]" title="Find my public IP">
 <pre>```shell
 wget http://ipinfo.io/ip -qO -
 
 # OR
 
 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/&lt;.*$//'  
+```
+
+```shell
+# All IP Infos
+curl ipinfo.io
 ```</pre>
 </div>
 <div created="20160603155717804" modified="20160603160046514" title="GettingStarted">
