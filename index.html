@@ -6911,7 +6911,7 @@ Error message and password prompt
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="Welcome [[Find files / directories]] [[Find / Replace Text in file]]" title="$:/StoryList">
+<div list="Welcome RSYNC" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160712151547904" modifier="schmas" title="$:/temp/advancedsearch">
@@ -7237,8 +7237,8 @@ This plugin contains tools to help slice up long texts into individual tiddlers.
 <div created="20160603155436181" creator="schmas" modified="20160712154301129" modifier="schmas" title="$:/temp/RemoteAssetSearch/$:/config/OfficialPluginLibrary">
 <pre></pre>
 </div>
-<div created="20160616152629153" creator="schmas" modified="20160807193140602" modifier="schmas" title="$:/temp/search">
-<pre>.ssh/config</pre>
+<div created="20160616152629153" creator="schmas" modified="20160813152122642" modifier="schmas" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20160712154626896" creator="schmas" modified="20160712154626896" modifier="schmas" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html" url="http://tiddlywiki.com/library/v5.1.11/index.html">
 <pre>loaded</pre>
@@ -7621,10 +7621,15 @@ jhead -autorot -nf%Y-%m-%d-%Hh%Mm%Ss *.* # with auto rotate
 <div created="20160714205336285" creator="schmas" modified="20160714205346433" modifier="schmas" tags="Docker" title="My Dockers">
 <pre></pre>
 </div>
-<div created="20160712155945352" creator="schmas" modified="20160712160003920" modifier="schmas" tags="[[Shell / Bash]]" title="RSYNC">
+<div created="20160712155945352" creator="schmas" modified="20160813152407753" modifier="schmas" tags="[[Shell / Bash]]" title="RSYNC">
 <pre>```shell
 # Copy (from/to) Remote file with RSYNC
-rsync -avzh -e &quot;ssh -p 443&quot; aws-will-key.pem dceschmidt@54.94.192.75:~/
+rsync -avzh --progress -e &quot;ssh -p 443&quot; aws-will-key.pem dceschmidt@54.94.192.75:~/
+```
+
+```shell
+# Copy
+rsync -vh --progress &lt;FROM&gt; &lt;TO&gt;
 ```</pre>
 </div>
 <div created="20160616184322392" creator="schmas" modified="20160712155808563" modifier="schmas" tags="TableOfContents" title="Shell / Bash">
