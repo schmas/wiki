@@ -233,6 +233,8 @@ Error message and password prompt
 
 <li>$:/state/toc/Linux-SSH--81657105</li>
 
+<li>$:/state/toc/Linux-Ubuntu--687205153</li>
+
 <li>$:/state/toc/Linux-Ubuntu--81657105</li>
 
 <li>$:/state/toc/Shell / Bash-Batch Rename-1798960057</li>
@@ -408,6 +410,8 @@ Error message and password prompt
 <li>$:/view</li>
 
 <li>Batch Rename</li>
+
+<li>Change Timezone</li>
 
 <li>Client-Side Configuration Options</li>
 
@@ -6876,8 +6880,11 @@ Error message and password prompt
 <div created="20160803043932742" creator="schmas" modified="20160901193217357" modifier="schmas" title="$:/state/toc/Linux-SSH--81657105">
 <pre>close</pre>
 </div>
-<div created="20160803025050570" creator="schmas" modified="20160901193218205" modifier="schmas" title="$:/state/toc/Linux-Ubuntu--81657105">
-<pre>close</pre>
+<div created="20161225193221492" creator="schmas" modified="20161225193221492" modifier="schmas" title="$:/state/toc/Linux-Ubuntu--687205153">
+<pre>open</pre>
+</div>
+<div created="20160803025050570" creator="schmas" modified="20161225193406275" modifier="schmas" title="$:/state/toc/Linux-Ubuntu--81657105">
+<pre>open</pre>
 </div>
 <div created="20160712155040427" creator="schmas" modified="20160712155040427" modifier="schmas" title="$:/state/toc/Shell / Bash-Batch Rename-1798960057">
 <pre>open</pre>
@@ -6918,7 +6925,7 @@ Error message and password prompt
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="[[Linux Commands]] Linux" title="$:/StoryList">
+<div list="[[Change Timezone]] Welcome [[User management]] Ubuntu Linux" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160712151547904" modifier="schmas" title="$:/temp/advancedsearch">
@@ -7430,6 +7437,12 @@ find ./* -type f -name &quot;*.1&quot; -exec sh -c 'a=$(echo {}); b=$(echo {} | 
 # Teste
 # Rename photos with taken date, in all directories
 find . -type f -name &quot;*.jpg&quot; -exec sh -c 'jhead -nf%Y-%m-%d_%Hh%Mm%Ss {}' \;
+```</pre>
+</div>
+<div created="20161225193228674" creator="schmas" modified="20161225193356821" modifier="schmas" tags="Ubuntu" title="Change Timezone">
+<pre>```shell
+# to change timezone run:
+sudo dpkg-reconfigure tzdata
 ```</pre>
 </div>
 <div created="20160803043656659" creator="schmas" modified="20160803043924629" modifier="schmas" tags="SSH" title="Client-Side Configuration Options">
