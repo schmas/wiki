@@ -437,6 +437,8 @@ Error message and password prompt
 
 <li>Git</li>
 
+<li>Install Wifi Driver to Ubuntu Mac Mini</li>
+
 <li>JHead - Photos utils</li>
 
 <li>Linux</li>
@@ -6820,7 +6822,7 @@ Error message and password prompt
 <div created="20160603155804142" creator="schmas" modified="20160616175407129" modifier="schmas" title="$:/state/add-plugin-info/$:/temp/ServerConnection/http://tiddlywiki.com/library/v5.1.11/index.html/$:/temp/RemoteAssetInfo/http://tiddlywiki.com/library/v5.1.11/index.html/$:/plugins/tiddlywiki/tw5.com-docs">
 <pre>no</pre>
 </div>
-<div created="20160603155649791" creator="schmas" modified="20160622180525275" modifier="schmas" title="$:/state/showeditpreview">
+<div created="20160603155649791" creator="schmas" modified="20161228201614466" modifier="schmas" title="$:/state/showeditpreview">
 <pre>yes</pre>
 </div>
 <div created="20160712153901323" creator="schmas" modified="20160712153901323" modifier="schmas" title="$:/state/ShowPaletteEditor">
@@ -6925,7 +6927,7 @@ Error message and password prompt
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="[[Change Timezone]] Welcome [[User management]] Ubuntu Linux" title="$:/StoryList">
+<div list="[[Install Wifi Driver to Ubuntu Mac Mini]] Welcome Ubuntu" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160712151547904" modifier="schmas" title="$:/temp/advancedsearch">
@@ -7621,6 +7623,21 @@ git merge upstream/master
 * [[Configuring a remote for a fork|https://help.github.com/articles/configuring-a-remote-for-a-fork/]]
 * [[Syncing a fork|https://help.github.com/articles/syncing-a-fork/]]
 </pre>
+</div>
+<div created="20161228201347185" creator="schmas" modified="20161228201845588" modifier="schmas" tags="Ubuntu" title="Install Wifi Driver to Ubuntu Mac Mini">
+<pre>[[WifiDocs/Driver/bcm43xx|https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx]]
+
+Open a Terminal and install the bcmwl-kernel-source package:
+
+```shell
+sudo apt-get update
+sudo apt-get --reinstall install bcmwl-kernel-source
+
+# To test the driver (and remove the need for a computer restart) use:
+
+sudo modprobe -r b43 ssb wl brcmfmac brcmsmac bcma
+sudo modprobe wl
+```</pre>
 </div>
 <div created="20160622175810205" creator="schmas" description="jhead util, to rename, rotate, photos, etc" modified="20160712160350312" modifier="schmas" tags="[[Shell / Bash]]" title="JHead - Photos utils">
 <pre>```shell
