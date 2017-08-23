@@ -427,6 +427,8 @@ Error message and password prompt
 
 <li>docker-openvpn-client</li>
 
+<li>Draft of 'Git'</li>
+
 <li>FFmpeg</li>
 
 <li>Find / Replace Text in file</li>
@@ -6929,7 +6931,7 @@ Error message and password prompt
 <div created="20160616144053416" creator="s" modified="20160616144054080" modifier="schma" title="$:/status/UserName">
 <pre>schmas</pre>
 </div>
-<div list="[[Connecting Ubuntu Server to WPA2 Wifi]] Welcome" title="$:/StoryList">
+<div list="Welcome [[Draft of 'Git']]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20160616151212541" creator="schmas" modified="20160712151547904" modifier="schmas" title="$:/temp/advancedsearch">
@@ -7540,6 +7542,64 @@ docker-compose up --build
 * https://github.com/bgahagan/docker-proxy
 * https://github.com/schmas/docker-transmission-openvpn
 * http://kchard.github.io/runit-quickstart/</pre>
+</div>
+<div created="20160616183930754" creator="schmas" draft.of="Git" draft.title="Git" modified="20170823092513478" modifier="schmas" tags="TableOfContents" title="Draft of 'Git'">
+<pre>! Revert your branch to exactly match the remote branch
+```shell
+git fetch origin
+git reset --hard origin/master
+
+# If you want to save your current branchs state before doing this (just in case), you can do:
+
+git commit -a -m &quot;Saving my work, just in case&quot;
+git branch my-saved-work
+```
+
+! Revert unstaged and not committed
+```shell
+git clean -df
+git reset HEAD --hard
+git checkout .
+```
+
+! Remove IGNORED files
+```shell
+git clean -xdf
+```
+
+! Using Multiple Remote Repos
+Single remote with multiple URLs, pushed (and fetched) consecutively
+
+```shell
+git remote set-url --add origin ssh://git@bitbucket.org/user/myproject.git
+git push origin master
+```
+
+! GitHub Syncing a fork
+```shell
+# Adding Original Repo
+git remote -v # List current remote repositories
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPO.git
+
+# Syncing (Pulling) with Original Repo
+git fetch upstream
+git checkout master
+
+# Rebase Or Merge
+git rebase upstream/master # cleaner, apply reabse and than your changes
+git merge upstream/master
+
+# Commit???
+# Push???
+```
+
+! Links
+* [[Save git credential|http://stackoverflow.com/questions/5343068/is-there-a-way-to-skip-password-typing-when-using-https-github/5343146#5343146]]
+* [[Using Multiple Remote Repos|http://blog.schwuk.com/2013/02/11/using-multiple-remote-repositories-with-git/]]
+* [[keeping-a-github-fork-updated|https://robots.thoughtbot.com/keeping-a-github-fork-updated]]
+* [[Configuring a remote for a fork|https://help.github.com/articles/configuring-a-remote-for-a-fork/]]
+* [[Syncing a fork|https://help.github.com/articles/syncing-a-fork/]]
+</pre>
 </div>
 <div created="20160616183813422" creator="schmas" modified="20160616183851184" modifier="schmas" tags="TableOfContents" title="FFmpeg">
 <pre>! Ripping DVD, concating more than one VOB
